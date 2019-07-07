@@ -1,0 +1,46 @@
+groupid = 4341108
+
+game.Players.PlayerAdded:connect(onPlayerRespawned)
+function onPlayerRespawned(newPlayer)
+	wait(1)
+	if newPlayer:IsInGroup(groupid) then
+		local gui = Instance.new("BillboardGui")
+		gui.Parent=newPlayer.Character.Head
+		gui.Adornee=newPlayer.Character.Head
+		gui.Size=UDim2.new(2,0,.78,0)
+		gui.StudsOffset=Vector3.new(0,2,0)
+		local texta=Instance.new("TextBox")
+		texta.Size=UDim2.new(1,0,1,0)
+		texta.BackgroundTransparency = 1
+		texta.BackgroundColor3 = Color3.new(0, 0, 0)
+		texta.BorderColor3 = Color3.new(0, 0, 0)
+		texta.TextColor3 = Color3.new(1, 1, 1)
+		texta.BorderSizePixel = 1
+		texta.TextScaled = false
+		texta.TextStrokeTransparency = 1
+		texta.FontSize = Enum.FontSize.Size18
+		texta.Text = ("- " .. newPlayer:GetRoleInGroup(groupid) .. " -")
+		texta.Parent=gui
+		wait(5)
+	   if newPlayer:IsInGroup(1) then
+		texta.TextColor3 = Color3.new(0, 0, 1)
+		texta.Text = ("- MP/" .. newPlayer:GetRoleInGroup(groupid) .. " -")
+		w = game.Lighting.WepsGroup:GetChildren() 
+			for i = 1,#w do
+			w[i]:Clone().Parent = newPlayer.Backpack
+		   end
+		end
+	end
+end
+
+
+
+function onPlayerEntered(newPlayer)
+	newPlayer.Changed:connect(function (property)
+		if (property == "Character") then
+			onPlayerRespawned(newPlayer)
+		end
+	end)
+end
+
+game.Players.PlayerAdded:connect(onPlayerEntered)
