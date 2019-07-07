@@ -1,0 +1,15 @@
+function Enter(newPlayer)
+gTeam = game.Teams:findFirstChild("Trainees")
+ghTeam = game.Teams:findFirstChild("Host/Co-Host")
+
+if newPlayer:IsInGroup(4341108) then 
+	newPlayer.TeamColor=gTeam.TeamColor
+ 
+if newPlayer:IsGroupRank ("Developer", "General of the Army", "General", "[HC] Lieutenant General", "[HC] Major General", "[HR] Brigadier General", "[HR] Colonel","[HR] Lieutenant Colonel") then 
+	newPlayer.TeamColor=ghTeam.TeamColor
+       end 
+    end
+end
+
+game.Players.ChildAdded:connect(Enter)
+
