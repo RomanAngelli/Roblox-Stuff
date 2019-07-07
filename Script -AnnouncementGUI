@@ -1,0 +1,22 @@
+local msgs = {
+	"Make sure to join Clothing Frame's!",
+	"If you abuse a glitch we'll threat you as an exploiter!",
+}
+
+while true do
+	for i = 1, #msgs do
+		spawn(function()
+			while script.Parent.TextTransparency >= 0 and wait() do
+				script.Parent.TextTransparency = script.Parent.TextTransparency - 0.1
+			end
+		end)
+		for j = 1, #msgs[i] do
+			script.Parent.Text = string.sub(msgs[i], 1, j)
+			wait()
+		end
+		wait(10)
+		while script.Parent.TextTransparency <= 1 and wait() do
+			script.Parent.TextTransparency = script.Parent.TextTransparency + 0.1
+		end
+	end
+end
