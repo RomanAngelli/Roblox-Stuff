@@ -1,0 +1,13 @@
+local passid = 140391003
+local tools = {"Bagpipe","Fife","Drum"} 
+local GamePassService = Game:GetService('GamePassService')
+game.Players.PlayerAdded:connect(function(player)
+repeat wait(0.1) until player.Backpack	
+repeat wait(0.1) until player.StarterGear
+if GamePassService:PlayerHasPass(player, passid) then
+for i = 1,#tools do
+game.Lighting:FindFirstChild(tools[i]):Clone().Parent = player.Backpack
+game.Lighting:FindFirstChild(tools[i]):Clone().Parent = player.StarterGear
+end
+end
+end)
