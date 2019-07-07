@@ -1,0 +1,145 @@
+wait(2)
+group = 
+rankuniforms = true 
+shirtnoranks = "http://www.roblox.com/asset/?id=" 
+pantsnoranks = "http://www.roblox.com/asset/?id=" 
+
+totalranks = 16
+
+rank1 = 1 -- LR
+shirt1 = "http://www.roblox.com/asset/?id=521399247" 
+pants1 = "http://www.roblox.com/asset/?id=1009571052"
+
+rank2 = 2 
+shirt2 = "http://www.roblox.com/asset/?id=521399247"
+pants2 = "http://www.roblox.com/asset/?id=1009571052" 
+
+rank3 = 3 
+shirt3 = "http://www.roblox.com/asset/?id=521399247" 
+pants3 = "http://www.roblox.com/asset/?id=1009571052"  
+
+rank4 = 4 
+shirt4 = "http://www.roblox.com/asset/?id=521399247" 
+pants4 = "http://www.roblox.com/asset/?id=1009571052" 
+
+rank5 = 5
+shirt5 = "http://www.roblox.com/asset/?id=521399247"
+pants5 = "http://www.roblox.com/asset/?id=1009571052"
+ 
+rank6 = 6 --MR
+shirt6 = "http://www.roblox.com/asset/?id=521399247"
+pants6 = "http://www.roblox.com/asset/?id=1009571052" 
+
+rank7 = 7 
+shirt7 = "http://www.roblox.com/asset/?id=521399247"
+pants7 = "http://www.roblox.com/asset/?id=1009571052" 
+
+rank8 = 8
+shirt8 = "http://www.roblox.com/asset/?id=521399247"
+pants8 = "http://www.roblox.com/asset/?id=1009571052" 
+
+rank9 = 9 
+shirt9 = "http://www.roblox.com/asset/?id=1009527056" 
+pants9 = "http://www.roblox.com/asset/?id=1009571052" 
+
+rank10 = 10 --HR
+shirt10 = "http://www.roblox.com/asset/?id=1009527056" 
+pants10 = "http://www.roblox.com/asset/?id=1009571052" 
+
+rank11 = 11 
+shirt11 = "http://www.roblox.com/asset/?id=1009527056" 
+pants11 = "http://www.roblox.com/asset/?id=1009571052" 
+
+rank12 = 12 
+shirt12 = "http://www.roblox.com/asset/?id=1009527056" 
+pants12 = "http://www.roblox.com/asset/?id=1009571052" 
+
+rank13 = 13 
+shirt13 = "http://www.roblox.com/asset/?id=1009527056" 
+pants13 = "http://www.roblox.com/asset/?id=1009571052"
+
+rank14 = 14
+shirt14 = "http://www.roblox.com/asset/?id=1009527056" 
+pants14 = "http://www.roblox.com/asset/?id=1009571052" 
+
+rank15 = 15
+shirt15 = "http://www.roblox.com/asset/?id=1009527056" 
+pants15 = "http://www.roblox.com/asset/?id=1009571052" 
+
+rank16 = 16
+shirt16 = "http://www.roblox.com/asset/?id=1009527056" 
+pants16 = "http://www.roblox.com/asset/?id=1009571052" 
+
+
+plr = script.Parent.Parent
+repeat wait(.25) until plr.Character ~= nil
+wait(1)
+char = plr.Character
+if plr:IsInGroup(group) then
+	if char:FindFirstChild("Pants") ~= nil then
+	else
+		pnts = Instance.new("Pants")
+		pnts.Name = "Pants"
+		pnts.Parent = char
+	end
+	if char:FindFirstChild("Shirt") ~= nil then
+	else
+		pnts = Instance.new("Shirt")
+		pnts.Name = "Shirt"
+		pnts.Parent = char
+	end
+	if rankuniforms == true then
+		if plr:GetRankInGroup(group)== rank1 then
+			char.Shirt.ShirtTemplate = shirt1
+			char.Pants.PantsTemplate = pants1
+		elseif plr:GetRankInGroup(group)== rank2 then
+			char.Shirt.ShirtTemplate = shirt2
+			char.Pants.PantsTemplate = pants2
+		elseif plr:GetRankInGroup(group)== rank3 then
+			char.Shirt.ShirtTemplate = shirt3
+			char.Pants.PantsTemplate = pants3
+		elseif plr:GetRankInGroup(group)== rank4 then
+			char.Shirt.ShirtTemplate = shirt4
+			char.Pants.PantsTemplate = pants4
+		elseif plr:GetRankInGroup(group)== rank5 then
+			char.Shirt.ShirtTemplate = shirt5
+			char.Pants.PantsTemplate = pants5
+		elseif plr:GetRankInGroup(group)== rank6 then
+			char.Shirt.ShirtTemplate = shirt6
+			char.Pants.PantsTemplate = pants6
+		elseif plr:GetRankInGroup(group)== rank7 then
+			char.Shirt.ShirtTemplate = shirt7
+			char.Pants.PantsTemplate = pants7
+		elseif plr:GetRankInGroup(group)== rank8 then
+			char.Shirt.ShirtTemplate = shirt8
+			char.Pants.PantsTemplate = pants8
+		elseif plr:GetRankInGroup(group)== rank9 then
+			char.Shirt.ShirtTemplate = shirt9
+			char.Pants.PantsTemplate = pants9
+		elseif plr:GetRankInGroup(group)== rank10 then
+			char.Shirt.ShirtTemplate = shirt10
+			char.Pants.PantsTemplate = pants10
+		elseif plr:GetRankInGroup(group)== rank11 then
+			char.Shirt.ShirtTemplate = shirt11
+			char.Pants.PantsTemplate = pants11
+		elseif plr:GetRankInGroup(group)== rank12 then
+			char.Shirt.ShirtTemplate = shirt12
+			char.Pants.PantsTemplate = pants12
+	    elseif plr:GetRankInGroup(group)== rank13 then
+			char.Shirt.ShirtTemplate = shirt13
+			char.Pants.PantsTemplate = pants13
+		elseif plr:GetRankInGroup(group)== rank14 then
+			char.Shirt.ShirtTemplate = shirt14
+			char.Pants.PantsTemplate = pants14
+		elseif plr:GetRankInGroup(group)== rank15 then
+			char.Shirt.ShirtTemplate = shirt15
+			char.Pants.PantsTemplate = pants15
+		elseif plr:GetRankInGroup(group)== rank16 then
+			char.Shirt.ShirtTemplate = shirt16
+			char.Pants.PantsTemplate = pants16
+		end
+	else
+		char.Shirt.ShirtTemplate = shirtnoranks
+		char.Pants.PantsTemplate = pantsnoranks
+	end
+end
