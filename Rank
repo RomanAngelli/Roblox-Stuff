@@ -1,0 +1,6 @@
+game.Players.PlayerAdded:connect(function(P)
+	repeat wait() until P:findFirstChild("leaderstats")
+	local Rank = Instance.new("StringValue", P.leaderstats)
+		Rank.Name = "Rank"
+		Rank.Value = P:GetRoleInGroup(4341108):gsub("Guest", "UNKNOWN")
+end)
